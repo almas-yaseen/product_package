@@ -1,0 +1,54 @@
+{% extends "home/base.html" %}
+{% block content %}
+
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-6 mb-5 ftco-animate">
+                <div class="main-image">
+                    <a href="{{ product.image.url }}" data-lightbox="product-gallery" data-title="{{ product.product_name }}">
+                        <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.product_name }}">
+                    </a>
+                </div>
+                <div class="thumbnail-gallery mt-3">
+                    {% for image in product.images.all %}
+                    <a href="{{ image.image.url }}" data-lightbox="product-gallery" data-title="{{ product.product_name }}">
+                        <img src="{{ image.image.url }}" class="thumbnail-img" alt="{{ product.product_name }}">
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                <h3>{{ product.product_name }}</h3>
+                <div class="rating d-flex">
+                    <!-- Your rating details here -->
+                </div>
+                
+                <p style="background-color: #dff0d8; padding: 10px; border: 1px solid #d6e9c6;">
+                <strong> We will share the details only once you contact us.</strong>
+            </p>
+           <p>Demo package available</p>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="form-group d-flex">
+                    
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                   
+                    <div class="w-100"></div>
+                    <div class="col-md-12">
+                        <p style="color: #000;"> different sizes are avialable</p>
+                    </div>
+                </div>
+                <p><a href="{% url 'contact' %}" class="btn btn-success py-3 px-5">Contact us</a></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

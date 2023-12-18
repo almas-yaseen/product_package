@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defind</title>
+    <link rel="shortcut icon" href="{% static 'images/DeFind.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1 -->
+        <section class="section-1" id="section-1">
+            <div class="justify-between">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="{% static 'images/DeFind.svg' %}" alt="Logo" width="100px" height="100px" style="margin-top: -33px;">
+            </a>
+            <!--End of Logo -->
+
+            <!-- Navbar -->
+            <nav class="navbar">
+                <a href="#section-3" class="navbar-link">Logo creation</a>
+                <a href="#section-2" class="navbar-link">Product package</a>
+                <a href="#section-5" class="navbar-link">Bottle package</a>
+                <a href="#section-4" class="navbar-link">Branding</a>
+            </nav>
+        </div>
+            <!-- End of Navbar -->
+
+            <!-- Cube -->
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="front-side">
+                        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2016/09/ultimate-guide-product-packaging.jpg?auto=format&q=60&w=2060&h=1545&fit=crop&crop=faces"   >
+                       
+                    </div>
+                    <div class="back-side center">
+                        <img src="https://assets.cdn.thewebconsole.com/S3WEB6795/blogImages/640a74f865aaa.jpeg?v=2&geometry(1500%3E)" alt="Logo" width="170px" height="170px">
+                        
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls">
+                    <a href="#" class="top-x-control">
+                        <i class="fas fa-arrow-up "></i>
+                    </a>
+                    <a href="#" class="bottom-x-control">
+                        <i class="fas fa-arrow-down "></i>
+                    </a>
+                    <a href="#" class="left-y-control">
+                        <i class="fas fa-arrow-left "></i>
+                    </a>
+                    <a href="#" class="right-y-control">
+                        <i class="fas fa-arrow-right "></i>
+                    </a>
+                    <a href="#" class="top-z-control">
+                        <i class="fas fa-arrow-down "></i>
+                    </a>
+                    <a href="#" class="bottom-z-control">
+                        <i class="fas fa-arrow-up "></i>
+                    </a>
+                </div>
+                <!-- End of Controls -->
+            </div>
+            <!-- End of Cube -->
+
+            <!-- Banner -->
+           
+            <div class="section-1-banner center">
+                <h1>&#8592; </h2>
+                    
+                <p>"Packaging is a silent salesman."</p>
+                <span> - DeFind</span>
+                
+           
+              <br>
+              <br>
+             <a href="{% url 'signin' %}"> <button type="button" >Sign in</button></a>
+            </div>
+            <!-- End of Banner -->
+
+            <!-- Slideshow -->
+            <div class="slideshow"></div>
+            <!-- End of Slideshow -->
+        </section>
+        <!-- End of Section 1 -->
+
+        <!-- Section 2 -->
+        <section class="section-2" id="section-2">
+            
+            <!-- Section 2 Heading -->
+            <h1 class="section-2-heading">Packaging</h1>
+            <!-- End of Section 2 Heading -->
+
+            <!-- Section 2 Images -->
+            <div class="iphones">
+                <img src="https://www.proglobalbusinesssolutions.com/wp-content/uploads/2019/03/be-creative-and-innovative.jpg" class="iphone-img-1">
+                <img src="https://blog-frontend.envato.com/cdn-cgi/image/width=2400,quality=75,format=auto/uploads/sites/2/2022/04/ProductPackagingDesignTrends-Cover-Blog.jpeg" class="iphone-img-2">
+            </div>
+            <!-- End of Section 2 Images -->
+
+            <!-- Section 2 Buttons -->
+            <div class="iphone-btns">
+                
+                <a href="{% url 'register' %}" class="iphone-btn center"><span>Sign up</span></a>
+            </div>
+            <!-- End of Section 2 Buttons -->
+        </section>
+        <!-- End of Section 2 -->
+
+        <!-- Section 3 -->
+        <section class="section-3 center" id="section-3">
+            <!-- Section 3 Heading -->
+            <h1 class="section-3-heading">Logo creation</h1>
+            <!-- End of Section 3 Heading -->
+
+            <!-- Section 3 Content -->
+            <div class="section-3-content center">
+                <!-- Section 3 Images -->
+                <img src="{% static 'images/MacBook/macbook-screen.png' %}" class="macbook-img-1">
+                <img src="{% static 'images/MacBook/macbook-keyboard.png' %}" class="macbook-img-2">
+                <!-- End of Section 3 Images -->
+
+                <!-- Section 3 Loading -->
+                <div class="loading-wrapper">
+                    <div class="loading center">
+                        <i class="fab fa-apple"></i>
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <!-- End of Section 3 Loading -->
+
+                <!-- Section 3 Info -->
+                <div class="macbook-info">
+                    <div class="text-center">
+                   
+                    <video width="400" height="400" autoplay muted loop>
+                        <!-- Provide the path to your video file -->
+                        <source src="{% static 'images/ee.mp4' %}" type="video/mp4">
+                        <!-- You can add additional source elements for different video formats -->
+                        <!-- <source src="path/to/your/video.webm" type="video/webm"> -->
+                        <!-- <source src="path/to/your/video.ogv" type="video/ogg"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+
+
+                </div>
+               
+                <!-- End of Section 3 Info -->
+            </div>
+            <!-- End of Section 3 Content -->
+        </section>
+        <!-- End of Section 3 -->
+        <div class="text-center" >
+            <video width="400" height="400" autoplay muted loop>
+                <!-- Provide the path to your video file -->
+                <source src="{% static 'images/rr.mp4' %}" type="video/mp4">
+                <!-- You can add additional source elements for different video formats -->
+                <!-- <source src="path/to/your/video.webm" type="video/webm"> -->
+                <!-- <source src="path/to/your/video.ogv" type="video/ogg"> -->
+                Your browser does not support the video tag.
+            </video>
+
+        
+                    
+
+
+        </div>
+    
+
+        <!-- Section 4 -->
+        <section class="section-4 center" id="section-4">
+            <!-- Section 4 Watches -->
+            <div class="watches center">
+                <!-- Watch Bands -->
+                <div class="watch-bands center">
+                    <img src="{% static 'images/fold1.webp' %}" class="watch-band-img" >
+                    
+                    <img src="{% static 'images/fold2.webp' %}" class="watch-band-img">
+                    <img src="{% static 'images/fold3.webp' %}" class="watch-band-img" >
+                    <img src="{% static 'images/fold4.webp' %}" class="watch-band-img" >
+                    <img src="{% static 'images/fold5.webp' %}" class="watch-band-img" >
+                    <img src="{% static 'images/fold6.webp' %}" class="watch-band-img">
+                    <img src="https://cdn.pacdora.com/image-resize/300xauto_outside/preview/510270-glass-glossy-6.jpg" class="watch-band-img">
+                    <img src="https://cdn.pacdora.com/image-resize/300xauto_outside/preview/510180-plastic-glossy-4.jpg" class="watch-band-img">
+
+                    
+                </div>
+                <!-- End of Watch Bands -->
+
+                <!-- Watch Cases -->
+                <div class="watch-cases center">
+                  
+                </div>
+                <!-- End of Watch Cases -->
+            </div>
+            <!-- End of Section 4 Watches -->
+
+            
+            <a href="#" class="watch-control watch-top-control center">
+                <i class="fas fa-angle-up"></i>
+            </a>
+            <a href="#" class="watch-control watch-right-control center">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            <a href="#" class="watch-control watch-bottom-control center">
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <a href="#" class="watch-control watch-left-control center">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            <!-- End of Watch Controls -->
+
+            <!-- Watch Button -->
+         <a href="{% url 'register' %}">   <button class="watch-btn">Register</button></a>
+            <!-- End of Watch Button -->
+        </section>
+        <!-- End of Section 4 -->
+
+        <!-- Section 5 -->
+        <section class="section-5 center" id="section-5">
+            <!-- Section 5 Content -->
+            <div class="airpods">
+                <!-- Section 5 Heading -->
+                <h1 class="section-5-heading">Bottle package</h1>
+                <!-- End of Section 5 Heading -->
+
+                <!-- Section 5 Images -->
+                <img src="https://img.freepik.com/premium-psd/front-view-lemon-juice-glass-bottle-with-cap_23-2148728487.jpg" class="airpods-img-1">
+                <img src="https://img.freepik.com/premium-vector/juice-bottle-label-design_672856-173.jpg" class="airpods-img-2">
+                <!-- End of Section 5 Images -->
+
+                <!-- Section 5 Buttons -->
+                <div class="airpods-buttons">
+                   
+                  <a href="{% url 'register' %}">  <button class="airpods-btn">Sign up</button></a>
+                </div>
+                <!-- End of Section 5 Buttons -->
+            </div>
+            <!-- End of Section 5 Content -->
+        </section>
+        <!-- End of Section 5 -->
+
+        <!-- Section 6 -->
+        <section class="section-6 center">
+            <div class="section-6-icons">
+                <a href="#section-1" class="icon-link">
+                    <i class="fab fa-apple"></i>
+                </a>
+                <a href="#section-2" class="icon-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#section-3" class="icon-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#section-4" class="icon-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#section-5" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">Copyright &copy; CodeAndCreate All Rights Reserved</p>
+        </section>
+        <!-- End of Section 6 -->
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

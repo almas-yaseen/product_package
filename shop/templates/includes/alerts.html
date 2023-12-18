@@ -1,0 +1,10 @@
+{% for message in messages %}
+<script>
+
+    swal({
+        title: "{{message.tags}}!",
+        text: "{{message}}",
+        icon: "{{message.tags}}",
+      });
+</script>
+{% endfor %}

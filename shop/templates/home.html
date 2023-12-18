@@ -1,0 +1,273 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<section class="ftco-section">
+  <div class="container">
+    <div class="row no-gutters ftco-services">
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            <span class="fas fa-truck"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Free Shipping</h3>
+            <span>All Over india</span>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            <span class="fas fa-home"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Door Step delivery</h3>
+            <span>max 1-2 days(all over india)</span>
+          </div>
+        </div>    
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            <span class="fas fa-certificate"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Superior Quality</h3>
+            <span>Quality Products</span>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services mb-md-0 mb-4">
+          <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            <span class="fas fa-life-ring"></span>
+          </div>
+          <div class="media-body">
+            <h3 class="heading">Support</h3>
+            <span>We help you to create models</span>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center">
+  <a href="">  <button type="button" class="btn btn-success">Connect us</button></a>
+  </div>
+</section>
+
+<section class="ftco-section ftco-category ftco-no-pt">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6 order-md-last align-items-stretch d-flex">
+            <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url('https://i.pinimg.com/736x/4b/c7/64/4bc76406cf02492c590bd484d92471a9.jpg');">
+              <div class="text text-center">
+                
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url('https://www.iplpackaging.com/wp-content/uploads/2022/11/2-equilibriumDOTgucciDOTcom.jpg');">
+              <div class="text px-2 py-1">
+                <h2 class="mb-1"><a href="#">Product package</a></h2>
+              </div>
+            </div>
+            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url('https://images-platform.99static.com//e1E6L3A4prBUjS3IO_IysQTQMGU=/0x297:1333x1630/fit-in/500x500/projects-files/25/2507/250712/2e9c039d-f7af-429d-98e9-34265e5646af.jpg');">
+              <div class="text px-3 py-1">
+                <h2 class="mb-2"><a href="#">Bottle package</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url('https://4.imimg.com/data4/TV/GT/MY-8405029/logo-design-500x500.png');">
+          <div class="text px-3 py-1">
+           
+            <h2 class="mb-2"><a href="#">Logo designing</a></h2>
+          </div>		
+        </div>
+        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url('https://media.istockphoto.com/id/1292374288/photo/brand-logo-name-identity-and-customer-concept-chalk-board-background.webp?b=1&s=170667a&w=0&k=20&c=O6H0Ie-OoKppDacYsbo6V88etVG-3fTYmE5nlcLmC-k=');">
+          <div class="text px-3 py-1">
+            <h2 class="mb-2"><a href="#">Branding</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <span class="subheading">Featured Products</span>
+        <h2 class="mb-4">Our Products</h2>
+        <p>Any package related quries please contact soon we will customize for you</p>
+      </div>
+    </div>   		
+  </div>
+  <div class="container">
+    <div class="row">
+      {% for products in product %}
+      <div class="col-md-6 col-lg-3 ftco-animate">
+        <div class="product">
+          <a href="{% url 'single_product' id=products.id %}" class="img-prod"><img class="img-fluid" src="{{products.image.url}}" alt="Colorlib Template">
+            <span class="status">30%</span>
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3 text-center">
+            <h3><a href="{% url 'single_product' id=products.id %}">{{products.product_name}}</a></h3>
+            <div class="d-flex">
+              <div class="pricing">
+                
+              </div>
+            </div>
+            <div class="bottom-area d-flex px-3">
+              <div class="m-auto d-flex">
+  
+                
+                <a href="{% url 'single_product' id=products.id %}" class="heart d-flex justify-content-center align-items-center mt-1 ">
+                  <span><i class="fas fa-heart"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<div class="text-center">
+  <p class="btn btn-info" style="border: 1px solid #orange;">Coming soon stay tuned</p>
+</div>
+<br>
+<br>
+
+<section class="ftco-section img" style="background-image: url('https://cms.springfieldsolutions.co.uk/app/uploads/2022/01/1619540793-W6QFUHsMQEQHbZBcmoPgItz8xJ1uM7N4sIl9HxA2.jpg'); background-size: 400px 400px;">
+
+ 
+  <!-- Your content goes here -->
+
+
+    <div class="row justify-content-end">
+      <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+       
+       
+      
+        
+        
+       
+      </div>
+    </div>   		
+  </div>
+</section>
+
+<section class="ftco-section testimony-section">
+  <div class="container">
+  <div class="row justify-content-center mb-5 pb-3">
+    <div class="col-md-7 heading-section ftco-animate text-center">
+        <span class="subheading">Testimony</span>
+      <h2 class="mb-4">Why us ?</h2>
+      <p><strong>Choose us because we don’t just design, we create brand legacies. Your journey to distinction starts here.</strong> </p>
+    </div>
+  </div>
+  <div class="row ftco-animate">
+    <div class="col-md-12">
+      <div class="carousel-testimony owl-carousel">
+        <div class="item">
+          <div class="testimony-wrap p-4 pb-5">
+            <div class="user-img mb-5" style="background-image: url('https://images-platform.99static.com//bN8KmypbcyxXuhduK2AhrpVVhSw=/406x90:1461x1145/fit-in/590x590/99designs-contests-attachments/66/66989/attachment_66989451')">
+              <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="fas fa-id-card"></i>
+              </span>
+            </div>
+            <div class="text text-center">
+              <p class="mb-5 pl-4 line">"Elevate your brand with us – where every detail is a brushstroke on the canvas of your success story.</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="testimony-wrap p-4 pb-5">
+            <div class="user-img mb-5" style="background-image: url('https://images-platform.99static.com//U_qgS_gs3Ml0CWYZ3Ue-0uXCd7A=/228x0:728x500/fit-in/500x500/99designs-contests-attachments/89/89389/attachment_89389058')">
+              <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="fas fa-id-card"></i>
+              </span>
+            </div>
+            <div class="text text-center">
+              <p class="mb-5 pl-4 line">Experience the power of personalized design – your vision, our craftsmanship, an unbeatable partnership</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="testimony-wrap p-4 pb-5">
+            <div class="user-img mb-5" style="background-image: url('https://images-platform.99static.com//ZZcY90Gi0mmJT9zURuyW-QFzGeo=/93x0:892x799/fit-in/500x500/99designs-contests-attachments/111/111692/attachment_111692435')">
+              <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="fas fa-id-card"></i>
+              </span>
+            </div>
+            <div class="text text-center">
+              <p class="mb-5 pl-4 line">Design is not just what it looks like and feels like. Design is how it works..</p>
+           
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+<hr>
+
+<section class="ftco-section ftco-partner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="https://media.designrush.com/inspiration_images/134805/conversions/_1512076803_93_Nike-preview.jpg" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="data:image/png;base64,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" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2021/11/29215128/Petro-Rabigh.png" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="https://static.vecteezy.com/system/resources/previews/020/285/114/original/liu-abstract-business-growth-logo-design-on-white-background-liu-creative-initials-letter-logo-concept-vector.jpg" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+      <div class="col-sm ftco-animate">
+        <a href="#" class="partner"><img src="https://media.licdn.com/dms/image/C560BAQH6Q8TY1J9HGQ/company-logo_200_200/0/1672028399574/forummalls_logo?e=2147483647&v=beta&t=lEJQHtsSDZUuVH8LZPFBmgrc0oDwdl2axbIUL3APfT4" class="img-fluid" alt="Colorlib Template"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+  <div class="container py-4">
+    <div class="row d-flex justify-content-center py-5">
+      <div class="col-md-6">
+        <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+        <span>Get e-mail updates about our latest shops and special offers</span>
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <form action="#" class="subscribe-form">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control" placeholder="Enter email address">
+            <input type="submit" value="Subscribe" class="submit px-3">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+{% endblock %}

@@ -1,0 +1,255 @@
+/* VARIABLES */
+:root {
+  --primary-color: #FFF;
+  --secondary-color: -webkit-linear-gradient(top, #7579FF, #B224EF);
+  --terciary-color: -webkit-linear-gradient(bottom, #7579FF, #B224EF);
+  --poppins: 'Poppins', sans-serif;
+}
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FORM */
+.login {
+  position: relative;
+  background: #CCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.login-form-container {
+  position: relative;
+  width: 400px;
+  height: 593px;
+  max-width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.login-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--poppins);
+  color: var(--primary-color);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all .6s ease-out;
+}
+
+.form-front,
+.form-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-color);
+  border-radius: 6px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.form-back {
+  transform: rotateY(180deg);
+}
+
+.form-wrapper {
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+
+.form-heading {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0 0.5rem 0.5rem 1.5rem;
+  font-family: var(--poppins);
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255, .5);
+}
+
+.login-form input::placeholder {
+  font-family: var(--poppins);
+  color: var(--primary-color);
+}
+
+.login-form input:focus-within {
+  outline: none;
+}
+
+.focus-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.focus-input i {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  transition: all .5s ease-out;
+}
+
+.focus-input::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width .5s ease-out;
+}
+
+.login-form input:focus-within + .focus-input i {
+  top: -20px;
+  transform: scale(.8);
+}
+
+.login-form input:focus-within {
+  padding-left: 0;
+}
+
+.login-form input:focus-within::placeholder {
+  opacity: 0;
+}
+
+.login-form input:focus-within + .focus-input::before {
+  width: 100%;
+}
+
+.pass {
+  margin-bottom: 0;
+}
+
+.change-password {
+  display: block;
+  padding-top: 0.5rem;
+  color: rgb(255, 255, 255, .8);
+  font-size: 0.7rem;
+  text-align: right;
+  margin-left: auto;
+}
+
+.change-password a:hover {
+  color: rgb(255, 255, 255, 1);
+}
+
+.remember-me {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.login-form input[type="checkbox"]:not(:checked),
+.login-form input[type="checkbox"]:checked {
+  display: none;
+}
+
+.remember-me label {
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.remember-me label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+.remember-me label::after {
+  content: '\2713';
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  font-size: 0.8rem;
+  color: #000;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.remember-me input:checked + label::after {
+  opacity: 1;
+}
+
+.login-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-form {
+  margin: 2rem 0;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.btn-form:hover {
+  color: var(--primary-color);
+  background: var(--terciary-color);
+}
+
+.change-forms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-forms {
+  color: rgb(255, 255, 255, .8);
+  background: none;
+  cursor: pointer;
+}
+
+.change-forms:hover {
+  color: rgb(255, 255, 255, 1);
+}
